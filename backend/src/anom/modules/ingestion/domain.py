@@ -1,0 +1,1 @@
+# EventEnvelope, ValidatedEvent (placeholder)
