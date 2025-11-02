@@ -3,4 +3,7 @@ name = "anom-platform-backend"
 version = "0.1.0"
 description = "Backend for generic business-event + rule platform"
 requires-python = ">=3.10"
-dependencies = []
+dependencies = [
+    "fastapi>=0.110.0",
+    "uvicorn[standard]>=0.23.0",
+]
