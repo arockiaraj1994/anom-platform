@@ -245,24 +245,46 @@ it just enforces logic that *you define dynamically.*
 
 ---
 
-## 🏁 Quick Start (Conceptual)
+## 🏁 Quick Start (Local Dev)
+
+### Backend (FastAPI)
 
 ```bash
-# 1. Start containers
-docker compose up -d
-
-# 2. Run backend locally
 cd backend
-uvicorn src.anom.api.main_app:app --reload
 
-# 3. Access API docs
-http://localhost:8000/docs
+# (optional) create a virtual environment
+python -m venv .venv            # use `python3` on macOS/Linux
+.\.venv\Scripts\activate        # PowerShell on Windows
+# source .venv/bin/activate      # macOS/Linux equivalent
 
-# 4. Start frontend (dev)
-cd frontend
-npm install
-npm run dev
+# install runtime dependencies
+python -m pip install -U pip
+python -m pip install fastapi "uvicorn[standard]"
+
+# launch the API with hot reload
+uvicorn --app-dir src anom.api.main_app:app --reload --host 127.0.0.1 --port 8000
 ```
+
+- API docs: http://127.0.0.1:8000/docs
+
+### Frontend (React + Vite)
+
+```bash
+cd frontend
+
+# install node modules
+npm install
+
+# point the UI at the local API (PowerShell example)
+$env:VITE_API_URL = "http://127.0.0.1:8000"
+
+# start the dev server
+npm run dev -- --host 127.0.0.1
+```
+
+- UI: http://127.0.0.1:5173
+- macOS/Linux: `export VITE_API_URL=http://127.0.0.1:8000`
+
 
 ---
 

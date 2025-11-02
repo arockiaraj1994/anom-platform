@@ -1,0 +1,113 @@
+:root {
+  font-family: "Red Hat Display", "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #f2f4f8;
+  color: #1b1d21;
+}
+
+a {
+  text-decoration: none;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  background: #f2f4f8;
+}
+
+.app-sidebar {
+  width: 80px;
+  background: #0b1f3a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 0;
+  gap: 16px;
+}
+
+.app-sidebar .pf-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0066cc;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.app-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #f2f4f8;
+}
+
+.app-header {
+  background: #ffffff;
+  border-bottom: 1px solid #dfe3e8;
+  padding: 20px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-content {
+  flex: 1;
+  padding: 32px;
+}
+
+.tab-strip {
+  border-bottom: 1px solid #dfe3e8;
+  background: #ffffff;
+}
+
+.pf-tab-panel {
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #dfe3e8;
+}
+
+.pf-panel-muted {
+  border: 1px dashed #97c1ff;
+  padding: 32px;
+  text-align: center;
+  background: #f8fbff;
+}
+
+.pf-dialog-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.pf-dialog-heading-icon {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #0b6efd, #0085ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.pf-dialog-actions {
+  border-top: 1px solid #e5e9ef;
+  background: #f5f5f7;
+  padding: 16px 24px;
+}
+
+.square-card {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border: 1px solid #dfe3e8 !important;
+}
+
+.square-button {
+  border-radius: 0 !important;
+}
